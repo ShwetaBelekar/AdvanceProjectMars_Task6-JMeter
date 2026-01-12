@@ -1,0 +1,1032 @@
+{
+	"info": {
+		"_postman_id": "e7739b84-d43f-4306-86cb-28aed2364b5c",
+		"name": "Advance Task 6 Project Mars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41690629"
+	},
+	"item": [
+		{
+			"name": "Get login Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5003/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin into Project Mars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"moneytony@ymail.com\",\r\n    \"password\": \"Tonymoney@2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60968/authentication/authentication/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60968",
+					"path": [
+						"authentication",
+						"authentication",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Language",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYwNzc5LCJleHAiOjE3Njc1NjQzNzksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.u4LpnTM59Ci95pgeVFZoJPtuz1SAOoKm5D5zK2Cdt4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Hindi\",\r\n  \"level\": \"Basic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addLanguage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addLanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Language",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYwNzc5LCJleHAiOjE3Njc1NjQzNzksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.u4LpnTM59Ci95pgeVFZoJPtuz1SAOoKm5D5zK2Cdt4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"695ad66ea41dfdf373b053c0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/deleteLanguage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"deleteLanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Language",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYwNzc5LCJleHAiOjE3Njc1NjQzNzksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.u4LpnTM59Ci95pgeVFZoJPtuz1SAOoKm5D5zK2Cdt4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Hindi\",\r\n  \"level\": \"Basic\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/getLanguage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"getLanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit existing language",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYwNzc5LCJleHAiOjE3Njc1NjQzNzksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.u4LpnTM59Ci95pgeVFZoJPtuz1SAOoKm5D5zK2Cdt4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": \"695ad66ea41dfdf373b053c0\",\r\n  \"name\": \"English\",\r\n  \"level\": \"Basic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/updateLanguage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"updateLanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Skill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3OTAzMjA4LCJleHAiOjE3Njc5MDY4MDgsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.0eIW0eZK383OblYHHFz8Iv8BPmWWjViGVZ7gtvjd69o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Skill\": \"Singing\",\r\n  \"ExperienceLevel\": \"Beginner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addSkill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addSkill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit exisiting skill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3OTAzMjA4LCJleHAiOjE3Njc5MDY4MDgsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.0eIW0eZK383OblYHHFz8Iv8BPmWWjViGVZ7gtvjd69o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PersonSkillId\": \"696010058c07f8360b11fa41\",\r\n  \"Skill\": \"Singing\",\r\n  \"ExperienceLevel\": \"Expert\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/updateSkill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"updateSkill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Skill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYwNzc5LCJleHAiOjE3Njc1NjQzNzksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.u4LpnTM59Ci95pgeVFZoJPtuz1SAOoKm5D5zK2Cdt4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PersonSkillId\": \"695ad7d1a41dfdf373b053c1\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/deleteSkill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"deleteSkill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Education",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Netherlands\",\r\n\"degree\": \"Economics\",\r\n\"instituteName\": \"Model College\",\r\n\"title\": \"B.A\",\r\n\"yearOfGraduation\": \"2008\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addEducation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addEducation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Education",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Netherlands\",\r\n\"degree\": \"Economics\",\r\n\"id\": \"695adb8ea41dfdf373b053c4\",\r\n\"instituteName\": \"Mumbai University\",\r\n\"title\": \"B.A\",\r\n\"yearOfGraduation\": \"2008\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/updateEducation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"updateEducation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Education",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"695adb8ea41dfdf373b053c4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/deleteEducation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"deleteEducation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Certification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"certificationFrom\": \"Industry Connect\",\r\n\"certificationName\": \"Software Developer\",\r\n\"certificationYear\": \"2008\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addCertification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addCertification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Certification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"certificationFrom\": \"Industry Connect\",\r\n\"certificationName\": \"Software Tester\",\r\n\"certificationYear\": \"2008\",\r\n\"id\": \"695ae603a41dfdf373b053c7\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/updateCertification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"updateCertification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Certification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTYyMDY2LCJleHAiOjE3Njc1NjU2NjYsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.CkQ8A20KAsLA0AdLZ0YrJE3wpdC5Vks3CDqw_jhPMy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"695ae603a41dfdf373b053c7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/deleteCertification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"deleteCertification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Profile Description",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTY2MzU5LCJleHAiOjE3Njc1Njk5NTksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.nBJa-xiD1ifmzyPcnJXmTNDrijOfIQ0xxm7R4HB9slk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"description\": \"Hi I am Tony Money your friend guide and well wisher.\",\r\n   \"personId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Profile Description",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTY2MzU5LCJleHAiOjE3Njc1Njk5NTksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.nBJa-xiD1ifmzyPcnJXmTNDrijOfIQ0xxm7R4HB9slk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/getInfo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"getInfo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Profile Description",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NTY2MzU5LCJleHAiOjE3Njc1Njk5NTksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.nBJa-xiD1ifmzyPcnJXmTNDrijOfIQ0xxm7R4HB9slk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Hi Everyone I am Tony Money. I can speak three languages fluently and they are English Hindi and Marathi so if anyone is interested in learning these languages please tell me know i am happy to help. I have acquired some skills from my previous jobs and from my hobbies and they are: 1) Basic grooming and make up this skill will help you look professional, smart and presentable everyday if you are office, business or stay at home women. 2)Calligraphy this skill helps develop fine motor skills improves memory retention and encourages creativity and encourages creativity.\",\r\n   \"personId\": \"68298235283422f41f3fbf52\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/addInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"addInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add ShareSkill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ0NzU1LCJleHAiOjE3Njc2NDgzNTUsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.kmJlAJBW1-VawtdHRgS8AM2zDaotKyU7b7zTrzqF2Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Selenium\",\r\n    \"description\": \"Automation testing tool\",\r\n    \"categoryId\": \"3\",\r\n    \"subcategoryId\": \"1\",\r\n    \"tags\": [{\"id\": \"Software testing\", \"text\": \"Software testing\"}],\r\n    \"serviceType\": \"1\",\r\n    \"locationType\": \"0\",\r\n    \"skillTrade\": [],\r\n    \"charge\": \"10\",\r\n    \"isActive\": \"true\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/addListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"addListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit existing ShareSkill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ0NzU1LCJleHAiOjE3Njc2NDgzNTUsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.kmJlAJBW1-VawtdHRgS8AM2zDaotKyU7b7zTrzqF2Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"title\": \"Playwright\",\r\n    \"description\": \"Atomation testing tool\",\r\n    \"categoryId\": \"3\",\r\n    \"subcategoryId\": \"1\",\r\n    \"tags\": [{\"id\": \"Software testing\", \"text\": \"Software testing\"}],\r\n    \"serviceType\": \"1\",\r\n    \"locationType\": \"0\",\r\n    \"skillTrade\": [],\r\n    \"charge\": \"10\",\r\n    \"isActive\": \"true\",\r\n    \"id\": \"695c24b4973ad9dc77f5d64b\"\r\n   \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/addListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"addListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check ShareSkill",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQwMzgxLCJleHAiOjE3Njc2NDM5ODEsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.jzUQw7ZnxE67nbYOCelkyrVV4CCTatCarC4UI0wbC1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/GetService/?id=695c24b4973ad9dc77f5d64b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"GetService",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "695c24b4973ad9dc77f5d64b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing ShareSkill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ0NzU1LCJleHAiOjE3Njc2NDgzNTUsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.kmJlAJBW1-VawtdHRgS8AM2zDaotKyU7b7zTrzqF2Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"695c24b4973ad9dc77f5d64b\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/deleteServiceListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"deleteServiceListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View ShareSkill record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ0NzU1LCJleHAiOjE3Njc2NDgzNTUsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.kmJlAJBW1-VawtdHRgS8AM2zDaotKyU7b7zTrzqF2Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/getSellerDetails/?uid=68298235283422f41f3fbf52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"getSellerDetails",
+						""
+					],
+					"query": [
+						{
+							"key": "uid",
+							"value": "68298235283422f41f3fbf52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable and Enable ShareSkill record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ0NzU1LCJleHAiOjE3Njc2NDgzNTUsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.kmJlAJBW1-VawtdHRgS8AM2zDaotKyU7b7zTrzqF2Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"695c2704973ad9dc77f5d7c8\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/toggleIsActive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"toggleIsActive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Skill by Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3NjQ3ODE5LCJleHAiOjE3Njc2NTE0MTksInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.j446Hmj25tLVvBJL4k3bZ5ztG8w593lsVhs4dkw9Qj0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"terms\": {\r\n        \"searchString\": \"\",\r\n        \"categoryIndex\": \"8\",\r\n        \"subcategoryIndex\": null,\r\n        \"uId\": null\r\n    },\r\n    \"sortPagination\": {\r\n        \"offset\": 0,\r\n        \"limit\": 9\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51689/listing/listing/searchListings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51689",
+					"path": [
+						"listing",
+						"listing",
+						"searchListings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User SignOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI5ODIzNTI4MzQyMmY0MWYzZmJmNTIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjYwOTY4IiwiaWF0IjoxNzY3OTEzMzUxLCJleHAiOjE3Njc5MTY5NTEsInVuaXF1ZV9uYW1lIjoiNjgyOTgyMzUyODM0MjJmNDFmM2ZiZjUyIn0.KLSu4zOBWbxtN4Z-SP6ndyD9Zu9E0EY4sxHGRK__ZP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:60190/profile/profile/isUserAuthenticated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60190",
+					"path": [
+						"profile",
+						"profile",
+						"isUserAuthenticated"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
